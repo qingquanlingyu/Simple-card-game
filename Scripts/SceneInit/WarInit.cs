@@ -236,7 +236,7 @@ public class WarInit : MonoBehaviour
             else
                 GameObject.Find("Wizard").GetComponent<WizDemo1>().Idle();
             UpdateData();
-            if (RoleData.hp < 0)
+            if (RoleData.hp <= 0)
                 PlayerDead();
         }));
     }
@@ -253,7 +253,6 @@ public class WarInit : MonoBehaviour
     {
         RoleData.def = 0;
         RoleData.arm = 0;
-        RoleData.nowlayer++;
         int tmp = UnityEngine.Random.Range(0, 10);
         if (tmp < 6)
         {
